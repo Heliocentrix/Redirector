@@ -1,4 +1,10 @@
 <?php
+
+require 'vendor/autoload.php';
+
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+
 $redirect = getenv('REDIRECT');
 if($redirect) {
     header('Location: ' . $redirect);
